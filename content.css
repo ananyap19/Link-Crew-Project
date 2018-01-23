@@ -1,0 +1,40 @@
+a:link, a:visited {
+    background-color: #A8A8A8;
+    color: white;
+    padding: 9px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Verdana Header";
+    font-size: 30px
+}
+
+a:hover, a:active {
+    background-color: #D4AF37;
+}
+
+body {
+    background-color: #2E0C19; 
+}
+
+h1 {
+    font-family: "Verdana Header";
+    font-size: 60px;
+    color: white ;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family= "Verdana Header";
+    color: #D4AF37;
+}
+
+h3 {
+    text-align: center;
+    font-size: 20px;
+    font-family= "Verdana Header";
+    color: white;
+}

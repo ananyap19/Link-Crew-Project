@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="content.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <nav>
+      <a href="login.html">LOGIN</a>
+      <a href="index.html">HOME</a>
+    </nav>
+    
+	<style>
+			#zombie_map {
+    			width: 350px;
+    			height: 350px;
+		}
+		</style>
+
+		<title>ALL ABOUT</title>
+</head>
+	
+<body>
+
+    <h1> ALL ABOUT LINK CREW </h1>
+    <h2> Do You Have Link Crew At Your School? </h2>
+    <h2>  Label Below! </h2>
+    
+		<div id="zombie_map"></div>
+		<form>
+			<select id = "icon_to_use">
+				<option value = "Devil.png">Devil</option>
+				<option value = "hearteyes.png">Hearteyes</option>
+				<option value = "Dolphin.png">Dolphin</option>
+			</select>
+		
+	<script>
+    		var zombie_map;
+    		function initMap() {
+
+            	zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
+            	zoom: 10,
+            	center: {lat: 43.595310, lng: -79.640579}
+        	});
+
+  var trafficLayer = new google.maps.TrafficLayer();
+  trafficLayer.setMap(zombie_map);
+
+		zombie_map.addListener('click', function(e) {
+			var location = e.latLng;
+  			place_marker(location);
+		});
+    	}
+		function place_marker(location){
+			var emoji = document.getElementById('icon_to_use').value;
+			var marker = new google.maps.Marker({
+			position: location,
+			map: zombie_map,
+			icon: emoji 
+		});
+            
+	}
+	</script>
+
+    <h3> Link Crew is a well known program all around Canada. Link Crew has three main programs which are Academic, Social and Mental Health </h3>
+            
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc4JPRXVmNMaaGRDouq4g1ldyarzykn60&callback=initMap">
+	</script>
+
+       <script async defer
+      https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119&timestamp=1458000000&key=AIzaSyBc4JPRXVmNMaaGRDouq4g1ldyarzykn60&callback=initMap">
+	</script>
+
+	</body>
+</html>	
